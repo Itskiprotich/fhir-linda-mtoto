@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "119252448066",
+    "project_id": "milk-bank-4c859",
+    "storage_bucket": "milk-bank-4c859.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119252448066:android:e0b3ca829b3ff7638a0edb",
+        "android_client_info": {
+          "package_name": "com.imeja.milk_bank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119252448066-nhd7gqgvm9ocqe9kdbar4jke0n9e7ukb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbS7wvAPUTJ6Y6DZjvj6lRhUhec36vj6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119252448066-nhd7gqgvm9ocqe9kdbar4jke0n9e7ukb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

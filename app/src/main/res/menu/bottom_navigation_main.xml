@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_live_matches"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_baby_changing_station_24"
+        android:title="@string/menu_home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_matches"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_baby_changing_station_24"
+        android:title="@string/hmb"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_videos"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_baby_changing_station_24"
+        android:title="Stock"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_teams"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_baby_changing_station_24"
+        android:title="@string/statistics"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_news"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_baby_changing_station_24"
+        android:title="@string/profile"
+        app:showAsAction="ifRoom" />
+</menu>
