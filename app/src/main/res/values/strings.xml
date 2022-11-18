@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">milk-bank</string>
+    <string name="app_name">Milk Bank</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -10,7 +10,18 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <string name="hmb">HMB</string>
-    <string name="statistics">Statistics</string>
-    <string name="profile">Profile</string>
+    <string name="menu_hmb">HMB</string>
+    <string name="menu_statistics">Statistics</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_stock">Stock</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us">About Us</string>
+    <string name="share">Share </string>
+    <string name="rate">Rate</string>
+    <string name="menu_dev_email">Email: developer254@gmail.com</string>
+    <string name="app_about">An android reference application that leverages Google\'s FHIR Android SDK and WHO\'s Neo-natal Digital Adaptation Kit (NNDAK) to build a standard\'s based mobile solution to link Newborn Units and Human Milk Banks</string>
+    <string name="menu_active">"Active "</string>
+    <string name="menu_discharged">Discharged</string>
+
 </resources>

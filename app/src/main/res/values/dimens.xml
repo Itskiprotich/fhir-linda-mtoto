@@ -10,4 +10,5 @@
     <dimen name="fixture_team_icon_size">36dp</dimen>
     <dimen name="ft_score_text_size">28sp</dimen>
     <dimen name="ht_score_text_size">18sp</dimen>
+    <dimen name="two_dp">2dp</dimen>
 </resources>

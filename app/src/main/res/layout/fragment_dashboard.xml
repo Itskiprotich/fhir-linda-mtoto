@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".landing.DashboardFragment">
+
+    <include
+        android:id="@+id/include_viewpager_tabs_layout"
+        layout="@layout/include_viewpager_tabs_layout" />
+
+    <include
+        android:id="@+id/include_message_layout"
+        layout="@layout/include_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <include
+        android:id="@+id/include_progressbar_layout"
+        layout="@layout/include_progressbar_layout" />
+
+</RelativeLayout>

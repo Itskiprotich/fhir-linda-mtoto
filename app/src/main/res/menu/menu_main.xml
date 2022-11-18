@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_about_us"
+        android:enabled="true"
+        android:title="@string/about_us"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_share"
+        android:enabled="true"
+        android:title="@string/share"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_rate"
+        android:enabled="true"
+        android:title="@string/rate"
+        app:showAsAction="never" />
+
+</menu>

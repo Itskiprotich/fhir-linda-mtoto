@@ -3,40 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_live_matches"
+        android:id="@+id/menu_home"
         android:checkable="true"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_baby_changing_station_24"
+        android:icon="@drawable/ic_baseline_account_balance_24"
         android:title="@string/menu_home"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_matches"
+        android:id="@+id/menu_hmb"
         android:checkable="true"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_baby_changing_station_24"
-        android:title="@string/hmb"
+        android:title="@string/menu_hmb"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_videos"
+        android:id="@+id/menu_stock"
         android:checkable="true"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_baby_changing_station_24"
-        android:title="Stock"
+        android:icon="@drawable/ic_baseline_add_shopping_cart_24"
+        android:title="@string/menu_stock"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_teams"
+        android:id="@+id/menu_statistics"
         android:checkable="true"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_baby_changing_station_24"
-        android:title="@string/statistics"
+        android:icon="@drawable/ic_baseline_pie_chart_24"
+        android:title="@string/menu_statistics"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_news"
+        android:id="@+id/menu_profile"
         android:checkable="true"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_baby_changing_station_24"
-        android:title="@string/profile"
+        android:icon="@drawable/ic_baseline_account_box_24"
+        android:title="@string/menu_profile"
         app:showAsAction="ifRoom" />
 </menu>
