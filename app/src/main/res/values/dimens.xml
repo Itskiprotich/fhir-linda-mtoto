@@ -11,4 +11,8 @@
     <dimen name="ft_score_text_size">28sp</dimen>
     <dimen name="ht_score_text_size">18sp</dimen>
     <dimen name="two_dp">2dp</dimen>
+    <dimen name="spacing_middle">10dp</dimen>
+    <dimen name="spacing_mlarge">25dp</dimen>
+    <dimen name="spacing_medium">5dp</dimen>
+    <dimen name="spacing_large">10dp</dimen>
 </resources>

@@ -7,4 +7,5 @@ object Constants {
     const val SYNC_VALUE = "Pumwani"
     const val SYNC_STATE = "PMH"
     const val SYNC_PARAM = "address-postalcode"
+    const val TAG_LOGIN = "login_tag"
 }

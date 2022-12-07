@@ -2,17 +2,24 @@ package com.imeja.milk_bank
 
 import android.app.Application
 import android.content.Context
+import android.content.SharedPreferences
 import com.google.android.fhir.*
 import com.google.android.fhir.sync.Sync
 import com.imeja.milk_bank.constants.Constants.DEMO_SERVER
+import com.imeja.milk_bank.constants.Constants.TAG_LOGIN
 import com.imeja.milk_bank.engine.FhirPeriodicSyncWorker
 
 class CoreApp : Application() {
     private val fhirEngine: FhirEngine by lazy { constructFhirEngine() }
     private lateinit var instance: Context
+    private val sharedPrefFile = "milk-bank"
+    private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
     override fun onCreate() {
         super.onCreate()
         instance = this.applicationContext
+        sharedPreferences = this.getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
+        editor = sharedPreferences.edit()
         FhirEngineProvider.init(
             FhirEngineConfiguration(
                 enableEncryptionIfSupported = true,
@@ -30,6 +37,17 @@ class CoreApp : Application() {
     companion object {
         fun fhirEngine(context: Context) =
             (context.applicationContext as CoreApp).fhirEngine
+
+        fun setSignedIn(context: Context, b: Boolean) {
+            (context.applicationContext as CoreApp).editor.putBoolean(TAG_LOGIN, b).commit()
+        }
+
+        fun isSignedIn(context: Context): Boolean {
+            return (context.applicationContext as CoreApp).sharedPreferences.getBoolean(
+                TAG_LOGIN,
+                false
+            )
+        }
 
     }
 }
