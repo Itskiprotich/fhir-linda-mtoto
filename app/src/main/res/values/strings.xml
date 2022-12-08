@@ -26,5 +26,26 @@
     <string name="email">Email Address</string>
     <string name="password">Password</string>
     <string name="signin">Sign In</string>
+    <string name="query_hint_patient_search">Search</string>
+    <string name="description_status">Image</string>
+    <string name="add_patient">Register a patient</string>
+    <string name="navya_patel">Navya Patel</string>
+    <string name="_50_years_old">50 years old</string>
+    <string name="id_456">Id: #...456</string>
+    <string name="app_registration">Registration</string>
+
+    <plurals name="ageYear">
+        <item quantity="one">%d year old</item>
+        <item quantity="other">%d years old</item>
+    </plurals>
+    <plurals name="ageMonth">
+        <item quantity="one">%d month old</item>
+        <item quantity="other">%d months old</item>
+    </plurals>
+    <plurals name="ageDay">
+        <item quantity="one">%d day old</item>
+        <item quantity="other">%d days old</item>
+    </plurals>
+
 
 </resources>

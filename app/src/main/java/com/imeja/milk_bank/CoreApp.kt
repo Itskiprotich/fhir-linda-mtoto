@@ -8,6 +8,7 @@ import com.google.android.fhir.sync.Sync
 import com.imeja.milk_bank.constants.Constants.DEMO_SERVER
 import com.imeja.milk_bank.constants.Constants.TAG_LOGIN
 import com.imeja.milk_bank.engine.FhirPeriodicSyncWorker
+import timber.log.Timber
 
 class CoreApp : Application() {
     private val fhirEngine: FhirEngine by lazy { constructFhirEngine() }
@@ -17,6 +18,9 @@ class CoreApp : Application() {
     private lateinit var editor: SharedPreferences.Editor
     override fun onCreate() {
         super.onCreate()
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+        }
         instance = this.applicationContext
         sharedPreferences = this.getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
         editor = sharedPreferences.edit()

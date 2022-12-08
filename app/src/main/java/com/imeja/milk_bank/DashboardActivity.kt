@@ -3,7 +3,6 @@ package com.imeja.milk_bank
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.StatFs
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -15,9 +14,7 @@ import com.google.android.fhir.sync.State
 import com.imeja.milk_bank.about.AboutActivity
 import com.imeja.milk_bank.databinding.ActivityDashboardBinding
 import com.imeja.milk_bank.landing.*
-import com.imeja.milk_bank.ui.gallery.GalleryFragment
-import com.imeja.milk_bank.ui.home.HomeFragment
-import com.imeja.milk_bank.ui.slideshow.SlideshowFragment
+import com.imeja.milk_bank.ui.patients.RegistrationFragment
 import com.imeja.milk_bank.viewmodels.MainViewModel
 import kotlinx.coroutines.launch
 
@@ -173,5 +170,10 @@ class DashboardActivity : AppCompatActivity() {
         binding.apply {
             toolbarTitle.text = string
         }
+    }
+
+    fun navigateTo(host: Fragment,title:String) {
+        updateTitle(title)
+        replaceFragment(supportFragmentManager, host::class.java.simpleName, host)
     }
 }

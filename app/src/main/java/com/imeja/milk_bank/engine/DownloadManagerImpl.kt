@@ -12,9 +12,8 @@ import java.util.*
 class DownloadManagerImpl : DownloadWorkManager {
     private val resourceTypeList = ResourceType.values().map { it.name }
 
-    //    private val urls = LinkedList(listOf("Patient?address-city=NAIROBI"))
-    private val urls =
-        LinkedList(listOf("Patient?$SYNC_PARAM=$SYNC_VALUE", "CarePlan", "NutritionOrder"))
+        private val urls = LinkedList(listOf("Patient?address-city=NAIROBI"))
+//    private val urls =        LinkedList(listOf("Patient?$SYNC_PARAM=$SYNC_VALUE", "CarePlan", "NutritionOrder"))
 
     override suspend fun getNextRequestUrl(context: SyncDownloadContext): String? {
         var url = urls.poll() ?: return null

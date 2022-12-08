@@ -22,4 +22,18 @@
         android:name="com.imeja.milk_bank.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/activeFragment"
+        android:name="com.imeja.milk_bank.landing.inner.ActiveFragment"
+        android:label="fragment_active"
+        tools:layout="@layout/fragment_active" >
+        <action
+            android:id="@+id/navigate_to_registration"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.imeja.milk_bank.ui.patients.RegistrationFragment"
+        android:label="@string/app_registration"
+        tools:layout="@layout/fragment_registration" />
 </navigation>

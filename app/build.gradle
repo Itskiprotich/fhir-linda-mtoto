@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -40,6 +41,9 @@ android {
             pickFirsts += ['META-INF/ASL-2.0.txt', 'META-INF/LGPL-3.0.txt']
         }
     }
+//    packagingOptions {
+//        resources.excludes.addAll(listOf("META-INF/ASL-2.0.txt", "META-INF/LGPL-3.0.txt"))
+//    }
 }
 
 dependencies {

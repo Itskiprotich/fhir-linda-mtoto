@@ -15,4 +15,6 @@
     <dimen name="spacing_mlarge">25dp</dimen>
     <dimen name="spacing_medium">5dp</dimen>
     <dimen name="spacing_large">10dp</dimen>
+    <dimen name="ten_dp">10dp</dimen>
+    <dimen name="twenty_dp">20dp</dimen>
 </resources>
