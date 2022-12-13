@@ -41,7 +41,7 @@ class RegistrationActivity : AppCompatActivity() {
             setTitleTextColor(resources.getColor(R.color.black))
             setNavigationIcon(R.drawable.ic_baseline_arrow_back_24) // set back arrow in toolbar
             setNavigationOnClickListener {
-                finish() // close this activity and return to preview activity (if there is any)
+              exitPage()// close this activity and return to preview activity (if there is any)
             }
         }
         replaceFragment(
@@ -54,6 +54,10 @@ class RegistrationActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    fun exitPage(){
+        this@RegistrationActivity.finish()
     }
 
     private fun replaceFragment(

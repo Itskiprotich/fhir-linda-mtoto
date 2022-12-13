@@ -123,25 +123,12 @@ class PatientListViewModel(application: Application, private val fhirEngine: Fhi
     }
 
     private fun filterCity(search: Search,status:Boolean) {
-        search.filter(Patient.ADDRESS_CITY, { value = "NAIROBI" })
+        search.filter(Patient.ADDRESS_CITY, { value = "KEUMBU" })
         search.filter(Patient.ACTIVE, {
             value = of(boolean = status)
         })
     }
 
-
-
-    private suspend fun getRiskAssessments(): Map<String, RiskAssessment?> {
-        return fhirEngine.search<RiskAssessment> {}.groupBy { it.subject.reference }
-            .mapValues { entry
-                ->
-                entry
-                    .value
-                    .filter { it.hasOccurrence() }
-                    .sortedByDescending { it.occurrenceDateTimeType.value }
-                    .firstOrNull()
-            }
-    }
 
       fun dischargePatient(resourceId: String) {
           viewModelScope.launch {

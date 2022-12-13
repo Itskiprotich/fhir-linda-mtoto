@@ -59,6 +59,8 @@ class AddPatientViewModel (application: Application, private val state: SavedSta
             }
             val patient = entry.resource as Patient
             patient.id = generateUuid()
+            patient.addressFirstRep.city="KEUMBU"
+            patient.active=true
             fhirEngine.create(patient)
             isPatientSaved.value = true
         }

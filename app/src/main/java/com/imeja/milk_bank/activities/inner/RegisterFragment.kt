@@ -14,6 +14,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.navArgs
 import com.google.android.fhir.datacapture.QuestionnaireFragment
 import com.imeja.milk_bank.R
+import com.imeja.milk_bank.activities.RegistrationActivity
 import com.imeja.milk_bank.databinding.FragmentRegisterBinding
 import com.imeja.milk_bank.viewmodels.AddPatientViewModel
 
@@ -39,11 +40,19 @@ class RegisterFragment : Fragment() {
         if (savedInstanceState == null) {
             addQuestionnaireFragment()
         }
+        binding.apply {
+            btnSubmit.setOnClickListener {
+                onSubmitAction()
+            }
+            btnCancel.setOnClickListener {
+                showCancelScreenerQuestionnaireAlertDialog()
+            }
+        }
     }
 
 
     private fun updateArguments() {
-        requireArguments().putString(QUESTIONNAIRE_FILE_PATH_KEY, "twins.json")
+        requireArguments().putString(QUESTIONNAIRE_FILE_PATH_KEY, "registration.json")
     }
 
     private fun addQuestionnaireFragment() {
@@ -58,9 +67,9 @@ class RegisterFragment : Fragment() {
     private fun onSubmitAction() {
         val questionnaireFragment =
             childFragmentManager.findFragmentByTag(QUESTIONNAIRE_FRAGMENT_TAG) as QuestionnaireFragment
-//        viewModel.saveScreenerEncounter(
-//            questionnaireFragment.getQuestionnaireResponse(),
-//        )
+        viewModel.clientRegistration(
+            questionnaireFragment.getQuestionnaireResponse(),
+        )
     }
 
     private fun showCancelScreenerQuestionnaireAlertDialog() {
@@ -70,7 +79,7 @@ class RegisterFragment : Fragment() {
                 builder.apply {
                     setMessage(getString(R.string.cancel_questionnaire_message))
                     setPositiveButton(getString(android.R.string.yes)) { _, _ ->
-                        NavHostFragment.findNavController(this@RegisterFragment).navigateUp()
+                        (activity as RegistrationActivity).exitPage()
                     }
                     setNegativeButton(getString(android.R.string.no)) { _, _ -> }
                 }
@@ -86,24 +95,24 @@ class RegisterFragment : Fragment() {
     }
 
     private fun observeResourcesSaveAction() {
-//        viewModel.isResourcesSaved.observe(viewLifecycleOwner) {
-//            if (!it) {
-//                Toast.makeText(
-//                    requireContext(),
-//                    getString(R.string.inputs_missing),
-//                    Toast.LENGTH_SHORT
-//                )
-//                    .show()
-//                return@observe
-//            }
-//            Toast.makeText(
-//                requireContext(),
-//                getString(R.string.resources_saved),
-//                Toast.LENGTH_SHORT
-//            )
-//                .show()
-//            NavHostFragment.findNavController(this).navigateUp()
-//        }
+        viewModel.isPatientSaved.observe(viewLifecycleOwner) {
+            if (!it) {
+                Toast.makeText(
+                    requireContext(),
+                    getString(R.string.inputs_missing),
+                    Toast.LENGTH_SHORT
+                )
+                    .show()
+                return@observe
+            }
+            Toast.makeText(
+                requireContext(),
+                getString(R.string.resources_saved),
+                Toast.LENGTH_SHORT
+            )
+                .show()
+            (activity as RegistrationActivity).exitPage()
+        }
     }
 
     companion object {
