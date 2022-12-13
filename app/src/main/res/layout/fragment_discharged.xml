@@ -8,11 +8,17 @@
     android:fillViewport="true"
     tools:context=".landing.inner.DischargedFragment">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include layout="@layout/include_base_recyclerview_layout" />
+        <include
+            android:id="@+id/include_base_recyclerview_layout"
+            layout="@layout/include_base_recyclerview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
 
         <include
             android:id="@+id/loading"

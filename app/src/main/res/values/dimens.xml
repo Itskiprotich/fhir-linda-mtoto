@@ -17,4 +17,12 @@
     <dimen name="spacing_large">10dp</dimen>
     <dimen name="ten_dp">10dp</dimen>
     <dimen name="twenty_dp">20dp</dimen>
+    <dimen name="_100dp">100dp</dimen>
+    <dimen name="_15dp">15dp</dimen>
+    <dimen name="_5dp">5dp</dimen>
+    <dimen name="_25dp">25dp</dimen>
+    <dimen name="info_card_margin">16dp</dimen>
+    <dimen name="info_card_margin_bottom">20dp</dimen>
+    <dimen name="info_card_header_margin">20dp</dimen>
+    <dimen name="info_card_header_margin_bottom">18dp</dimen>
 </resources>

@@ -33,6 +33,11 @@
     <string name="_50_years_old">50 years old</string>
     <string name="id_456">Id: #...456</string>
     <string name="app_registration">Registration</string>
+    <string name="action_submit">Submit</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="cancel_questionnaire_message">Are you sure you want to cancel?</string>
+    <string name="inputs_missing">Check all missing fields</string>
+    <string name="resources_saved">Record saved!</string>
 
     <plurals name="ageYear">
         <item quantity="one">%d year old</item>

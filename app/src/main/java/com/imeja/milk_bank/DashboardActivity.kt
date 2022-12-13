@@ -1,12 +1,12 @@
 package com.imeja.milk_bank
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.lifecycleScope
@@ -173,6 +173,15 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     fun navigateTo(host: Fragment,title:String) {
+//        val bundle =
+//            bundleOf(RegistrationFragment.QUESTIONNAIRE_FILE_PATH_KEY to "registration.json")
+//        findNavController(R.id.contentContainer).navigate(
+//            R.id.registrationFragment,
+//            bundle
+//        )
+        val bundle = Bundle()
+        bundle.putString(RegistrationFragment.QUESTIONNAIRE_FILE_PATH_KEY, "registration.json")
+        host.arguments = bundle
         updateTitle(title)
         replaceFragment(supportFragmentManager, host::class.java.simpleName, host)
     }

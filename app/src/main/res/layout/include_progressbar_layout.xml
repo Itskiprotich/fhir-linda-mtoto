@@ -7,7 +7,7 @@
     android:layout_centerInParent="true"
     android:layout_gravity="center"
     android:indeterminate="true"
-    android:indeterminateTint="@color/white"
+    android:indeterminateTint="@color/purple_200"
     android:visibility="gone">
 
 </ProgressBar>

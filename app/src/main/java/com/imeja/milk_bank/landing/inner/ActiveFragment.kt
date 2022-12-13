@@ -1,5 +1,6 @@
 package com.imeja.milk_bank.landing.inner
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -11,15 +12,19 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
+import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.fhir.FhirEngine
 import com.google.android.fhir.sync.State
 import com.imeja.milk_bank.CoreApp
 import com.imeja.milk_bank.DashboardActivity
+import com.imeja.milk_bank.R
+import com.imeja.milk_bank.activities.RegistrationActivity
 import com.imeja.milk_bank.databinding.FragmentActiveBinding
 import com.imeja.milk_bank.viewmodels.MainViewModel
 import com.imeja.milk_bank.viewmodels.PatientListViewModel
@@ -68,7 +73,7 @@ class ActiveFragment : Fragment() {
 
         binding.includeBaseRecyclerviewLayout.baseRecyclerView.addItemDecoration(
             DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL).apply {
-                setDrawable(ColorDrawable(Color.WHITE))
+                setDrawable(ColorDrawable(Color.GRAY))
             }
         )
         patientListViewModel.liveSearchedPatients.observe(viewLifecycleOwner) {
@@ -160,15 +165,25 @@ class ActiveFragment : Fragment() {
     }
 
     private fun onPatientItemClicked(patientItem: PatientItem) {
+        patientListViewModel.dischargePatient(patientItem.resourceId)
+        adapterList.notifyDataSetChanged()
 //        findNavController()            .navigate(PatientListFragmentDirections.navigateToProductDetail(patientItem.resourceId))
     }
 
     private fun onAddPatientClick() {
-        ((context as DashboardActivity)).navigateTo(RegistrationFragment(), "Registration")
+//        val bundle =
+//            bundleOf(RegistrationFragment.QUESTIONNAIRE_FILE_PATH_KEY to "client-registration.json")
+//        findNavController(R.id.contentContainer).navigate(
+//            R.id.customRegistrationFragment,
+//            bundle
+//        )
+//        ((context as DashboardActivity)).navigateTo(RegistrationFragment(), "Registration")
 //        findNavController()
 //            .navigate(ActiveFragmentDirections.navigateToRegistration())
 //        val navHostFragment = childFragmentManager.sup.findFragmentById(R.id.contentContainer) as NavHostFragment. // the id of your FragmentContainerView
 //        navController = navHostFragment.navController
+
+        startActivity(Intent(requireContext(), RegistrationActivity::class.java))
     }
 
     private fun fadeInTopBanner() {

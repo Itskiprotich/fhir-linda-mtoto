@@ -25,16 +25,15 @@
                 android:layout_gravity="end"
                 android:text="@string/add_patient"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
-                app:cornerRadius="@dimen/ten_dp"
-                app:strokeColor="@color/white" />
+                android:textColor="@color/black"
+                app:cornerRadius="@dimen/twenty_dp"
+                app:strokeColor="@color/purple_200" />
 
             <include
                 android:id="@+id/include_base_recyclerview_layout"
                 layout="@layout/include_base_recyclerview_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
         </LinearLayout>
 
         <include

@@ -7,8 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary">#0C0C0C</color>
-    <color name="primary_dark">#000000</color>
+    <color name="primary">#FFFFFFFF</color>
+    <color name="primary_dark">#FFFFFFFF</color>
     <color name="standings_grey">#F5F4F4</color>
 
     <color name="tabs_level1_background_color">#C6ECCF</color>
@@ -16,7 +16,7 @@
 
     <color name="accent">#07c092</color>
     <color name="star_colour">#F5BC47</color>
-    <color name="default_background">#151515</color>
+    <color name="default_background">@color/white</color>
     <color name="bottom_nav_bar_bg">#FFFFFF</color>
 
     <color name="arrival_text_color">#34AC39</color>

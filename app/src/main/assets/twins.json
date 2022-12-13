@@ -1,0 +1,80 @@
+{
+  "resourceType": "Questionnaire",
+  "item": [
+    {
+      "linkId": "1",
+      "type": "group",
+      "text": "Baby Registration",
+      "repeats": true,
+      "item": [
+        {
+          "linkId": "1-1",
+          "text": "Date of Birth",
+          "type": "dateTime",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+              "valueString": "yyyy-mm-dd"
+            }
+          ]
+        },
+        {
+          "linkId": "1-2",
+          "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "text": "Gender",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "answer-male",
+                "display": "Male"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "answer-female",
+                "display": "Female"
+              }
+            }
+          ],
+          "item": [
+            {
+              "linkId": "1-3-1",
+              "text": "Select Gender",
+              "type": "display",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ],
+                    "text": "Flyover"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
